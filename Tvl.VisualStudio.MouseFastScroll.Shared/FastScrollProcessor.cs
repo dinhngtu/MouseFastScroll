@@ -26,9 +26,9 @@ namespace Tvl.VisualStudio.MouseFastScroll
         public override void PreprocessMouseWheel(MouseWheelEventArgs e)
         {
             var scroller = TextView.ViewScroller;
-            if (scroller != null && Keyboard.Modifiers == ModifierKeys.Control)
+            if (scroller != null && Keyboard.Modifiers == ModifierKeys.Alt)
             {
-                scroller.ScrollViewportVerticallyByPage(e.Delta < 0 ? ScrollDirection.Down : ScrollDirection.Up);
+                scroller.ScrollViewportVerticallyByLines(e.Delta < 0 ? ScrollDirection.Down : ScrollDirection.Up, 12);
                 e.Handled = true;
             }
         }

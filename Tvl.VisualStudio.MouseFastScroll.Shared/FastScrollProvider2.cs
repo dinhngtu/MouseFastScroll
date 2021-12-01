@@ -7,21 +7,21 @@ namespace Tvl.VisualStudio.MouseFastScroll
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Utilities;
 
-    [Export(typeof(IMouseProcessorProvider))]
+    [Export(typeof(IKeyProcessorProvider))]
     [Order]
     [ContentType("text")]
-    [Name("FastScroll")]
+    [Name("FastScroll2")]
     [TextViewRole(PredefinedTextViewRoles.Interactive)]
-    internal class FastScrollProvider : IMouseProcessorProvider
+    internal class FastScrollProvider2 : IKeyProcessorProvider
     {
-        public IMouseProcessor GetAssociatedProcessor(IWpfTextView wpfTextView)
+        public KeyProcessor GetAssociatedProcessor(IWpfTextView wpfTextView)
         {
             if (wpfTextView == null)
             {
                 return null;
             }
 
-            return new FastScrollProcessor(wpfTextView);
+            return new FastScrollProcessor2(wpfTextView);
         }
     }
 }

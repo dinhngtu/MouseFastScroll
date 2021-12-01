@@ -9,7 +9,9 @@
     <Import_RootNamespace>Tvl.VisualStudio.MouseFastScroll</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)FastScrollProcessor2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FastScrollProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FastScrollProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FastScrollProvider2.cs" />
   </ItemGroup>
 </Project>
