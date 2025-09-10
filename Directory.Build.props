@@ -28,20 +28,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Codecov" Version="1.12.4" IncludeAssets="none" PrivateAssets="all" />
-    <PackageReference Include="OpenCover" Version="4.6.519" IncludeAssets="none" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- StyleCop Analyzers configuration -->
   <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)MouseFastScroll.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta006" PrivateAssets="all" />
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
-    <None Include="$(CodeAnalysisRuleSet)" Condition="'$(CodeAnalysisRuleSet)' != ''" Link="%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>
