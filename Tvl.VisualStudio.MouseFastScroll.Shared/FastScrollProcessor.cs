@@ -1,4 +1,4 @@
-﻿// Copyright (c) Tunnel Vision Laboratories, LLC. All Rights Reserved.
+// Copyright (c) Tunnel Vision Laboratories, LLC. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 
 namespace Tvl.VisualStudio.MouseFastScroll
@@ -28,7 +28,7 @@ namespace Tvl.VisualStudio.MouseFastScroll
             var scroller = TextView.ViewScroller;
             if (scroller != null && Keyboard.Modifiers == ModifierKeys.Alt)
             {
-                scroller.ScrollViewportVerticallyByLines(e.Delta < 0 ? ScrollDirection.Down : ScrollDirection.Up, 12);
+                scroller.ScrollViewportVerticallyByLines(e.Delta < 0 ? ScrollDirection.Down : ScrollDirection.Up, 20);
                 e.Handled = true;
             }
         }
